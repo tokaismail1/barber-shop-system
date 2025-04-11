@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>💈 MR.HANY 💈</title>
+  <link rel="stylesheet" href="styles.css"> <!-- ربط ملف الـ CSS -->
+</head>
+<body>
+
+<h1>💈MR.HANY💈</h1>
+
+<label for="employee">اسم الموظف:</label>
+<input type="text" id="employee" placeholder="اكتب اسم الموظف هنا">
+
+<label for="manualDate">تاريخ الخدمة (اختياري):</label>
+<input type="date" id="manualDate">
+
+<div class="services">
+  <label><input type="checkbox" value="شعر ودقن"> شعر ودقن (120ج)</label>
+  <label><input type="checkbox" value="حلاقة شعر"> حلاقة شعر (60ج)</label>
+  <label><input type="checkbox" value="دقن"> دقن (60ج)</label>
+  <label><input type="checkbox" value="قص أطفال (ولاد)"> قص أطفال (ولاد) (50ج)</label>
+  <label><input type="checkbox" value="قص أطفال (بنات)"> قص أطفال (بنات) (80ج)</label>
+  <label><input type="checkbox" value="استشوار شعر"> استشوار شعر (60ج)</label>
+  <label><input type="checkbox" value="مكوى بيبي ليس"> مكوى بيبي ليس (60ج)</label>
+  <label><input type="checkbox" value="توبيك تكثيف"> توبيك تكثيف (20ج)</label>
+  <label><input type="checkbox" value="صبغة شعر أسود"> صبغة شعر أسود (110ج)</label>
+  <label><input type="checkbox" value="رش ألوان"> رش ألوان (15ج)</label>
+  <label><input type="checkbox" value="شمع أو فتلة"> شمع أو فتلة (20ج)</label>
+  <label><input type="checkbox" value="تنظيف بشرة" id="faceCleanCheck"> تنظيف بشرة (حدد السعر)</label>
+</div>
+<input type="number" id="customPrice" placeholder="سعر تنظيف البشرة" style="display:none;">
+
+<p><strong>الإجمالي: </strong><span id="total">0</span> جنيه</p>
+
+<button class="btn" onclick="saveRecord()">تسجيل الخدمة</button>
+<button class="btn print" onclick="printInvoice()">طباعة الفاتورة</button>
+
+<hr style="margin: 40px 0;">
+
+<h2>📊 تقرير الموظفين</h2>
+
+<label>من تاريخ:</label>
+<input type="date" id="startDate">
+
+<label>إلى تاريخ:</label>
+<input type="date" id="endDate">
+
+<button class="btn" onclick="showReportRange()">عرض التقرير</button>
+<button class="btn clear" onclick="clearReport()">مسح التقرير</button>
+
+<button class="btn" onclick="showCurrentMonthReport()">عرض تقرير الشهر الحالي</button>
+
+<div id="reportArea" style="margin-top: 20px;"></div>
+
+<script src="script.js"></script> <!-- ربط ملف الـ JavaScript -->
+</body>
+</html>
